@@ -4,6 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="myPet" class="com.sysoiev.spring.spring_introduction.Dog">
+    </bean>
 
+    <bean id="myPerson" class="com.sysoiev.spring.spring_introduction.Person">
+        <property name="pet" ref="myPet"/>
+        <property name="surname" value="Sysoiev"/>
+        <property name="age" value="35"/>
     </bean>
 </beans>
