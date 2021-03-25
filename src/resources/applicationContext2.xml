@@ -8,7 +8,9 @@
             http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 
-    <bean id="myPet" class="com.sysoiev.spring.spring_introduction.Dog">
+    <bean id="myPet" class="com.sysoiev.spring.spring_introduction.Dog"
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 
 </beans>

@@ -11,6 +11,14 @@ public class Dog implements Pet{
         return name;
     }
 
+    public void init(){
+        System.out.println("Class dog init method");
+    }
+
+    public void destroy(){
+        System.out.println("Class dog destroy method");
+    }
+
     public void setName(String name) {
         this.name = name;
     }
