@@ -8,5 +8,6 @@ public class ScopeTest {
         Dog dog1 = context.getBean("dog", Dog.class);
         Dog dog2 = context.getBean("dog", Dog.class);
         System.out.println(dog1 == dog2);
+        context.close();
     }
 }
