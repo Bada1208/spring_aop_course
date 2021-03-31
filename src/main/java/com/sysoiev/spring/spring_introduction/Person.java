@@ -1,13 +1,20 @@
 package com.sysoiev.spring.spring_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
     @Autowired
+    @Qualifier("dog")
     private Pet pet;
+    //@Value("Ivanov")
+    @Value("${person.surname}")
     private String surname;
+    //@Value("23")
+    @Value("${person.age}")
     private int age;
 
    /* @Autowired
