@@ -3,13 +3,15 @@ package com.sysoiev.spring.aop.aspects;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class LoggingAndSecurityAspect {
+@Order(1)
+public class LoggingAspect {
 
-    @Pointcut("execution(* get*())")
+   /* @Pointcut("execution(* get*())")
     private void allGetMethodsFromUniLibrary() {
     }
 
@@ -34,20 +36,14 @@ public class LoggingAndSecurityAspect {
     @Before("allGetAndReturnMethodsFromUniLibrary()")
     public void beforeGetAndReturnLoggingAdvice() {
         System.out.println("beforeGetAndReturnLoggingAdvice: log get and return");
-    }
-/*
-    @Pointcut("execution(* get*())")
-    private void allGetMethods() {
-    }
+    }*/
 
-    @Before("allGetMethods()")
+
+    @Before("com.sysoiev.spring.aop.aspects.MyPointcuts.allGetMethods()")
     public void beforeGetLoggingAdvice() {
         System.out.println("beforeGetLoggingAdvice:");
     }
 
-    @Before("allGetMethods()")
-    public void beforeGetSecurityAdvice() {
-        System.out.println("beforeGetSecurityAdvice:");
-    }*/
+
 
 }
