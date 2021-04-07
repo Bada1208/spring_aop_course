@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Order(3)
 public class ExceptionHandlingAspect {
-    @Before("com.sysoiev.spring.aop.aspects.MyPointcuts.allGetMethods()")
+    @Before("com.sysoiev.spring.aop.aspects.MyPointcuts.allAddMethods()")
     public void beforeExceptionHandlingAdvice(){
         System.out.println("beforeExceptionHandlingAdvice: log exception");
     }
