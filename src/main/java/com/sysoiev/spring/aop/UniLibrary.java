@@ -10,10 +10,10 @@ public class UniLibrary extends AbstractLibrary {
         System.out.println("---------------------------------");
     }
 
-     public void returnBook() {
-         System.out.println("We return a book to the uni library");
-         System.out.println("---------------------------------");
-     }
+    public String returnBook() {
+        System.out.println("We return a book to the uni library");
+        return "War & peace!";
+    }
 
     public void getMagazine() {
         System.out.println("We take a magazine from uni library");
@@ -30,7 +30,7 @@ public class UniLibrary extends AbstractLibrary {
         System.out.println("---------------------------------");
     }
 
-    public void addBook(String person_name,Book book) {
+    public void addBook(String person_name, Book book) {
         System.out.println("We add a book to the uni library");
         System.out.println("---------------------------------");
     }
