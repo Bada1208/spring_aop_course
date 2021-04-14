@@ -1,6 +1,4 @@
-package com.sysoiev.spring.spring_introduction;
-
-import org.springframework.stereotype.Component;
+package com.sysoiev.spring.spring_core;
 
 //@Component("catBean")
 public class Cat implements Pet{

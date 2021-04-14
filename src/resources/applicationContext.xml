@@ -9,10 +9,10 @@
 
     <context:property-placeholder location="classpath:myApp.properties"/>
 
-    <bean id="myPet" class="com.sysoiev.spring.spring_introduction.Dog">
+    <bean id="myPet" class="com.sysoiev.spring.spring_core.Dog">
     </bean>
 
-    <bean id="myPerson" class="com.sysoiev.spring.spring_introduction.Person">
+    <bean id="myPerson" class="com.sysoiev.spring.spring_core.Person">
         <property name="pet" ref="myPet"/>
         <property name="surname" value="${person.surname}"/>
         <property name="age" value="${person.age}"/>

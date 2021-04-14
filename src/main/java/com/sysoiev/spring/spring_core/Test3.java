@@ -1,4 +1,4 @@
-package com.sysoiev.spring.spring_introduction;
+package com.sysoiev.spring.spring_core;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

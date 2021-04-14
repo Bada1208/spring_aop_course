@@ -1,4 +1,4 @@
-package com.sysoiev.spring.spring_introduction;
+package com.sysoiev.spring.spring_core;
 
 public class Test1 {
     public static void main(String[] args) {
