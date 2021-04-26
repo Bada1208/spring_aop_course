@@ -19,14 +19,21 @@ public class Test1 {
         try {
             session = factory.getCurrentSession();
             session.beginTransaction();
-        /*    Department department = new Department("IT", 300, 1000);
+          /*  Department department = new Department("Sales", 300, 1000);
             Employee employee1 = new Employee("Zaur", "Zaurov", 400);
             Employee employee2 = new Employee("Ilnar", "Ilnarov", 800);
+            Employee employee3 = new Employee("Elena", "Smirnova", 900);
             department.addEmployeeToDepartment(employee1);
             department.addEmployeeToDepartment(employee2);
+            department.addEmployeeToDepartment(employee3);
             session.save(department);*/
-            Employee employee = session.get(Employee.class, 1);
-            session.delete(employee);
+
+            Department department = session.get(Department.class, 3);
+            System.out.println(department);
+            System.out.println(department.getEmployeeList());
+
+          /*  Employee employee = session.get(Employee.class, 1);
+            session.delete(employee);*/
 
             session.getTransaction().commit();
         } finally {
